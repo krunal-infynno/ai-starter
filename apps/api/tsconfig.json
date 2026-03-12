@@ -1,7 +1,13 @@
 {
   "extends": "@ai-starter/typescript-config/nestjs.json",
   "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "outDir": "./dist",
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "paths": {
+      "@ai-starter/database": ["../../packages/database/src"],
+      "@ai-starter/database/*": ["../../packages/database/src/*"]
+    }
   }
 }

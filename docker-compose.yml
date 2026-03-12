@@ -1,0 +1,21 @@
+services:
+  postgres:
+    container_name: ai-starter-postgres
+    image: postgres:18
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ai-starter
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    networks:
+      - ai-starter-network
+
+volumes:
+  postgres_data:
+
+networks:
+  ai-starter-network:
+    driver: bridge

@@ -1,0 +1,30 @@
+{
+  "name": "@ai-starter/database",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./schema": "./dist/schema/index.js",
+    "./client": "./dist/client.js"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0 --fix",
+    "check-types": "tsc --noEmit",
+    "build": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@ai-starter/eslint-config": "*",
+    "@ai-starter/typescript-config": "*",
+    "@types/node": "^22.15.3",
+    "@types/pg": "^8.18.0",
+    "eslint": "^9.39.1",
+    "typescript": "5.9.2"
+  },
+  "dependencies": {
+    "drizzle-orm": "0.45.1",
+    "pg": "^8.13.1"
+  }
+}
