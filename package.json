@@ -9,6 +9,7 @@
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
+    "eslint": "^10.0.3",
     "prettier": "^3.7.4",
     "shadcn": "^4.0.5",
     "turbo": "^2.8.16",
