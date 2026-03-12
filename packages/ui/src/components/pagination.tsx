@@ -1,11 +1,7 @@
 import { Button } from "@ai-starter/ui/components/button";
 import { cn } from "@ai-starter/ui/lib/utils";
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  MoreHorizontalIcon,
-} from "lucide-react";
 import * as React from "react";
+import { LuChevronLeft, LuChevronRight, LuEllipsis } from "react-icons/lu";
 
 function Pagination({ className, ...props }: React.ComponentProps<"nav">) {
   return (
@@ -77,7 +73,7 @@ function PaginationPrevious({
       className={cn("pl-2!", className)}
       {...props}
     >
-      <ChevronLeftIcon data-icon="inline-start" />
+      <LuChevronLeft data-icon="inline-start" />
       <span className="hidden sm:block">{text}</span>
     </PaginationLink>
   );
@@ -96,7 +92,7 @@ function PaginationNext({
       {...props}
     >
       <span className="hidden sm:block">{text}</span>
-      <ChevronRightIcon data-icon="inline-end" />
+      <LuChevronRight data-icon="inline-end" />
     </PaginationLink>
   );
 }
@@ -115,7 +111,7 @@ function PaginationEllipsis({
       )}
       {...props}
     >
-      <MoreHorizontalIcon />
+      <LuEllipsis />
       <span className="sr-only">More pages</span>
     </span>
   );

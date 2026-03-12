@@ -2,8 +2,8 @@
 
 import { cn } from "@ai-starter/ui/lib/utils";
 import { OTPInput, OTPInputContext } from "input-otp";
-import { MinusIcon } from "lucide-react";
 import * as React from "react";
+import { LuMinus } from "react-icons/lu";
 
 function InputOTP({
   className,
@@ -77,7 +77,7 @@ function InputOTPSeparator({ ...props }: React.ComponentProps<"div">) {
       role="separator"
       {...props}
     >
-      <MinusIcon />
+      <LuMinus />
     </div>
   );
 }

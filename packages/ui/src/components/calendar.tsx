@@ -2,11 +2,6 @@
 
 import { Button, buttonVariants } from "@ai-starter/ui/components/button";
 import { cn } from "@ai-starter/ui/lib/utils";
-import {
-  ChevronDownIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-} from "lucide-react";
 import * as React from "react";
 import {
   type DayButton,
@@ -14,6 +9,7 @@ import {
   getDefaultClassNames,
   type Locale,
 } from "react-day-picker";
+import { LuChevronDown, LuChevronLeft, LuChevronRight } from "react-icons/lu";
 
 function Calendar({
   className,
@@ -152,21 +148,18 @@ function Calendar({
         Chevron: ({ className, orientation, ...props }) => {
           if (orientation === "left") {
             return (
-              <ChevronLeftIcon className={cn("size-4", className)} {...props} />
+              <LuChevronLeft className={cn("size-4", className)} {...props} />
             );
           }
 
           if (orientation === "right") {
             return (
-              <ChevronRightIcon
-                className={cn("size-4", className)}
-                {...props}
-              />
+              <LuChevronRight className={cn("size-4", className)} {...props} />
             );
           }
 
           return (
-            <ChevronDownIcon className={cn("size-4", className)} {...props} />
+            <LuChevronDown className={cn("size-4", className)} {...props} />
           );
         },
         DayButton: ({ ...props }) => (
