@@ -1,0 +1,7 @@
+{
+  "extends": "@ai-starter/typescript-config/nestjs.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": "./"
+  }
+}
