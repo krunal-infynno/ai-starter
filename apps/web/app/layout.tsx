@@ -1,15 +1,17 @@
-import "./globals.css";
+import "@ai-starter/ui/globals.css";
 
+import { cn } from "@ai-starter/ui/lib/utils";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Geist as FontSans, Geist_Mono as FontMono } from "next/font/google";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+
+const fontMono = FontMono({
+  subsets: ["latin"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
@@ -23,8 +25,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={cn(
+          fontSans.variable,
+          fontMono.variable,
+          "min-h-screen bg-background antialiased",
+        )}
+      >
         {children}
       </body>
     </html>

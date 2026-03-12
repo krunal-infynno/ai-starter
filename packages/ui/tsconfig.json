@@ -1,9 +1,11 @@
 {
   "extends": "@ai-starter/typescript-config/react-library.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "strictNullChecks": true
+    "baseUrl": ".",
+    "paths": {
+      "@ai-starter/ui/*": ["./src/*"]
+    }
   },
-  "include": ["src"],
+  "include": ["."],
   "exclude": ["node_modules", "dist"]
 }
